@@ -5,6 +5,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [result, setResult] = useState([]);
 
+  // Function to get the details about the pokemon from the pokeapi API
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,14 +25,17 @@ function App() {
 
   return (
     <div className="main">
+      {/* Background Image */}
       <img className="bg-img" src="/images/pokeball-bg.jpg" alt="bg-img" />
 
+      {/* Heading plus icon at the top */}
       <header className="header">
         <img className="img-icon" src="favicon.ico" alt="img-icon" />
         <h2>PokemonDigi</h2>
       </header>
 
       <section className="body">
+        {/* Form to search the name of the pokemon */}
         <form method="GET" className="form" onSubmit={onSubmit}>
           <input
             type="text"
@@ -42,6 +46,7 @@ function App() {
           <input type="submit" value="Search" />
         </form>
 
+        {/* Displaying the details of the pokemon which was retrieved */}
         {result.length !== 0 ? (
           <div className="pokemon-info">
             <div className="pokemon-info2">
@@ -80,6 +85,7 @@ function App() {
         )}
       </section>
 
+      {/* Footer of the page */}
       <section className="footer">
         <p>Copyright © PokemonDigi 2021</p>
       </section>
