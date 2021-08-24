@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="main">
       {/* Background Image */}
-      <img className="bg-img" src="/images/pokeball-bg.jpg" alt="bg-img" />
+      <img className="bg-img" src="images/pokeball-bg.jpg" alt="bg-img" />
 
       {/* Heading plus icon at the top */}
       <header className="header">
